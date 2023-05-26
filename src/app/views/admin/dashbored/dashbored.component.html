@@ -1,0 +1,41 @@
+<div class="sidebar">
+	<div class="sidebar-brand" style="width: 200px;">
+		<h2><span class="fa fa-user-o"> </span> Parfemerie</h2>
+	</div>
+
+	<div class="sidebar-menu" style="width: 200px;">
+        
+		<ul>
+			<li><a href="#" class="active"><span class="fa fa-home"></span><span>Accueil</span></a></li>
+			<li><a (click)="AfficherProduit()" ><span class="fa fa-tasks"></span><span>Afficher</span></a></li>
+			<li><a (click)="AjouterProduit()"><span class="fa fa-th-large"></span><span>Ajouter Produit</span></a></li>
+		</ul>
+	</div>
+</div>
+<div class="content">
+    <header style="height:100px !important;margin-bottom:30px !important">
+        <p><label for="menu"><span class="fa fa-bars"></span></label><span class="accueil">Accueil</span></p>
+    
+        <div class="search-wrapp">
+            <span class="fa fa-search"></span>
+            <input type="search" name="" placeholder="recherche">
+        </div>
+    
+        <div id="dropdown" class="user-wrapp">
+            <div>
+                <h4>Alassane</h4>
+                <small>Admin</small>
+            </div>
+            <img src="images/pp.jpg" width="30" height="30" class="logo-admin">
+            <div class="dropdown-content">
+                <p>Profil</p>
+                <p>Deconnexion</p>
+            </div>
+        </div>
+    </header>
+    <div style="	width: calc(100% - 22%) !important;  margin-top: 120px !important" >
+        
+        <app-all-produits *ngIf="afficherProduit"></app-all-produits>
+        <app-produit *ngIf="ajouterProduit"></app-produit>
+        </div>
+ </div>
